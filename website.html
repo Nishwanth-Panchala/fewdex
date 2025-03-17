@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .hero-section { text-align: center; padding: 50px 0; }
+        .hero-section h1 { font-size: 3rem; }
+        .logo { position: absolute; top: 3px; right: 20px; width: 50px; height: 50px; }
+        .brand-card img { height: 100px; object-fit: contain; }
+        footer { background-color: #222; color: white; padding: 20px 0; }
+    </style>
+    <script>
+        function validateLogin() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            if (!emailPattern.test(email)) {
+                alert("Invalid email format.");
+                return false;
+            }
+            if (!passwordPattern.test(password)) {
+                alert("Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.");
+                return false;
+            }
+            alert("Login Successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="website.html">Fashion Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="website.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            </ul>
+            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div id="home" class="hero-section">
+    <h1>Welcome to Fashion Hub</h1>
+    <img src="fh.jpg" class="logo" alt="Logo">
+</div>
+
+<div class="container mt-5">
+    <h2>Top Brands We Sell</h2>
+    <div class="brand-scroll">
+        <div class="card brand-card text-center">
+            <img src="Peter_England_logo.svg.png" class="card-img-top">
+            <div class="card-body">
+                <h6>Peter England</h6>
+            </div>
+        </div>
+        <div class="card brand-card text-center">
+            <img src="raymond-fine-fabrics-logo-CD39C46A02-seeklogo.com.png" class="card-img-top">
+            <div class="card-body">
+                <h6>Raymonds</h6>
+            </div>
+        </div>
+        <div class="card brand-card text-center">
+            <img src="images.png" class="card-img-top">
+            <div class="card-body">
+                <h6>Allen Solly</h6>
+            </div>
+        </div>
+        <div class="card brand-card text-center">
+            <img src="fogg-public-safety-academy-eagle-logo-11563428093kmabudqai8.webp" class="card-img-top">
+            <div class="card-body">
+                <h6>Fogg</h6>
+            </div>
+        </div>
+        
+            <div class="card brand-card text-center">
+                <img src="download.jpeg" class="card-img-top">
+                <div class="card-body">
+                    <h6>KS</h6>
+                </div>
+            </div>
+        
+            <div class="card brand-card text-center">
+                <img src="download.png" class="card-img-top">
+                <div class="card-body">
+                    <h6>Dazller</h6>
+                </div>
+            </div>
+       
+            <div class="card brand-card text-center">
+                <img src="download (1).jpeg" class="card-img-top">
+                <div class="card-body">
+                    <h6>Ponds</h6>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white mt-4">
+    <div class="container py-4">
+        <div class="row d-flex justify-content-between align-items-start">
+            <div class="col-md-3">
+                <h6 class="fw-bold">Get to Know Us</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Press Releases</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Fashion Science</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Make Money with Us</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Sell on Fashion Hub</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Advertise Your Products</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Become an Affiliate</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Partner with Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Connect with Us</h6>
+                <ul class="list-unstyled d-flex gap-3">
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Let Us Help You</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Your Account</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Returns & Refunds</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div class="text-center">
+            <img src="fh.jpg" alt="Fashion Hub" style="height: 40px;">
+            <p class="mt-2">&copy; 2025 Fashion Hub. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="return validateLogin()">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
